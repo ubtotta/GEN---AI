@@ -21,29 +21,24 @@ class TEXT_NORMALIZATION:
         print(f'Raw Text:\n{self.data}\n')
         self.string_lower()
         print('Converted to lower case successfully.\n')
-
         opt=int(input('Choose the options:\n1. Remove the punctuations and special characters\n2. Skip these two methods\n '))
         if opt==1:
             self.removing_puntuations()
             self.removing_spl_char()
             print('Removed the spaces and special characters successfully.\n')
         else:
-            print('Skipped these methods\n')
-
-        option=int(input('Choose the options:\n1. Replace the Emojis\n2. Demojice(conver to text)\n'))
-        if option==1:
-            self.handling_emoji(option)   
-            print('Replaced emojis successfully.\n') 
-        else:
-            self.handling_emoji(option)
-            print('Converted emojis to strings successfully.\n')
+            option=int(input('1. Replace the Emojis\n2. Demojice(conver to text)\n'))
+            if option==1:
+                self.handling_emoji(option)   
+                print('Replaced emojis successfully.\n') 
+            else:
+                self.handling_emoji(option)
+                print('Converted emojis to strings successfully.\n')
                 
         self.removing_extra_spaces()
         print('Removed extra spaces successfully.\n')
-
         self.contractions_()
         print('Applied Contractions successfully.\n')
-        
         self.correcting_words()
         print('Corrected the words successfully.\n')
 
